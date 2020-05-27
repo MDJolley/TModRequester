@@ -15,7 +15,7 @@ namespace TMR.Data
         [Required] public string Body { get; set; }
         [Required] public DateTimeOffset TimePosted { get; set; }
         public DateTimeOffset? TimeEdited { get; set; }
-        public int Votes { get; set; }
+        public int Votes { get; set; } = 0;
         public List<Guid> Voters { get; set; }
         public bool Solved { get; set; } = false;
     }

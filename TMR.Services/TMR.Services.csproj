@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TMR.Data\TMR.Data.csproj">
+      <Project>{254d82ee-87d4-4637-9420-37148920f6fa}</Project>
+      <Name>TMR.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMR.Models\TMR.Models.csproj">
+      <Project>{4bec51ba-e9d9-4bb6-8521-560e6f5b8d21}</Project>
+      <Name>TMR.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

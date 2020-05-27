@@ -13,3 +13,9 @@ C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Services
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Services\obj\Debug\TMR.Services.csproj.CopyComplete
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Services\bin\Debug\TMR.Data.dll
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Services\bin\Debug\TMR.Models.dll
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Services\bin\Debug\TMR.Data.pdb
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Services\bin\Debug\TMR.Data.dll.config
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Services\bin\Debug\TMR.Models.pdb
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Services\bin\Debug\TMR.Models.dll.config

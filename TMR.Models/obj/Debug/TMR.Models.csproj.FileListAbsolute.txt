@@ -13,3 +13,6 @@ C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Models\b
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Models\obj\Debug\TMR.Models.csproj.CopyComplete
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Models\bin\Debug\TMR.Data.dll
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Models\bin\Debug\TMR.Data.pdb
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Models\bin\Debug\TMR.Data.dll.config
