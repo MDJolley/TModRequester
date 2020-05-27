@@ -1,0 +1,15 @@
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.csprojAssemblyReference.cache
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\bin\Debug\TMR.Data.dll.config
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\bin\Debug\TMR.Data.dll
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\bin\Debug\TMR.Data.pdb
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\bin\Debug\EntityFramework.dll
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\bin\Debug\EntityFramework.xml
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.csproj.CopyComplete
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.dll
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.pdb
