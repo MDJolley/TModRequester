@@ -55,8 +55,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PostCreate.cs" />
+    <Compile Include="PostDetails.cs" />
+    <Compile Include="PostEdit.cs" />
     <Compile Include="PostListItem.cs" />
+    <Compile Include="ProfileDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplyCreate.cs" />
+    <Compile Include="ReplyDetail.cs" />
+    <Compile Include="ReplyEdit.cs" />
+    <Compile Include="ReplyListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

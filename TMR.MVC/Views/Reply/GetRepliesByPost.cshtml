@@ -1,0 +1,24 @@
+﻿@model IEnumerable<TMR.Models.ReplyListItem>
+
+@{int x = 0; }
+@foreach (var item in Model)
+{
+    <div class="reply-list">
+        <div class="snapshot">
+
+            @Html.Partial("../Profile/_GetProfileSnapshot", (TMR.Models.ProfileDetail)item.ProfileDetail, new ViewDataDictionary { { "user", item.UserID } })
+        
+        </div>
+        <div class="reply-content">
+            <div>
+                <p>
+                    @Html.DisplayFor(modelItem => item.Body)
+                </p>
+            </div>
+            <div class="reply-footer">
+            </div>
+        </div>
+        <br class="spacer" />
+
+    </div>
+                }

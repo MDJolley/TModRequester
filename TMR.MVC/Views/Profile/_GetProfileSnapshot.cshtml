@@ -1,0 +1,17 @@
+﻿@model TMR.Models.ProfileDetail
+
+@{
+    ViewBag.Title = "GetProfile";
+}
+
+@Html.HiddenFor(model=>model.BIO)
+
+    <div class="snapshot">
+        <h6 class="snpsht-name">@Html.DisplayFor(model=>model.UserName)</h6>
+        <img class="snpsht-pic" src="@($"/Assets/{Model.Picture}.png")" alt="Profile Image Missing" />
+    </div>
+
+
+
+
+

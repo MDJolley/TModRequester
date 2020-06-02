@@ -4,13 +4,8 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Mod Requests</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-
-<!--BootStrap Save Result temp banner-->
 @if (TempData.ContainsKey("SaveResult"))
 {
     <div class="alert alert-success fade in" role="alert">
@@ -22,45 +17,77 @@
     </div>
 }
 
+<p class="btn-block">
+    @Html.ActionLink("Post Request", "Create")
+</p>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Body)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Votes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TimePosted)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
+@foreach (var item in Model)
+{
+    <div class="post-list">
+        <div class="snapshot">
+            @Html.Partial("../Profile/_GetProfileSnapshot", (TMR.Models.ProfileDetail)item.Profile, new ViewDataDictionary { { "user", item.UserID } })
+        </div>
+        <div class="post-content">
+            <h3 class="post-title">
                 @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Body)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Votes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TimePosted)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-    }
+            </h3>
+            <div class="post-footer">
+                <p>
+                    Posted:
+                    @Html.DisplayFor(modelItem => item.TimePosted, "{0:dd/MM/yyyy}")
+                </p>
+                <p>
+                    Votes:
+                    @Html.DisplayFor(modelItem => item.Votes)
+                </p>
+                <p>
+                    @Html.ActionLink("View Thread", "Details", new { id = item.PostID })
+                </p>
+                @if (ViewBag.Viewer == item.UserID)
+                {
+                    <p>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.PostID })
+                    </p>
+                    <p>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.PostID })
+                    </p>
+                }
+            </div>
+        </div>
 
-</table>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <tr>
+        <td>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Votes)
+        </td>
+        <td>
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id = item.PostID }) |
+        </td>
+    </tr>
+}
+

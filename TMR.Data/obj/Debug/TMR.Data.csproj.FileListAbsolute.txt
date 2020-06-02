@@ -16,3 +16,9 @@ C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.InitialCreate.resources
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.csproj.GenerateResource.cache
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.InitialMigration.resources
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.SecondMigration.resources
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.WheresMyDb.resources
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.RemovedFK.resources
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.ProfileFK.resources
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.ProfileEnum.resources
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.EnumMisspelling.resources

@@ -33,6 +33,10 @@ namespace TMR.Data
         }
 
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Reply> Replies { get; set; }
+        public DbSet<Profile> Profiles { get; set; }
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

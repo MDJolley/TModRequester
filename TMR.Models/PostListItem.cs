@@ -13,10 +13,12 @@ namespace TMR.Models
     {
         
         public string Title { get; set; }
+        public Guid UserID { get; set; }
         public int PostID { get; set; }
+        public ProfileDetail Profile { get; set; }
+        public int Votes { get; set; }
 
         [Display(Name="Date of Post")]
-        public int Votes { get; set; }
         public DateTimeOffset TimePosted { get; set; }
     }
 }

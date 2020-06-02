@@ -63,9 +63,35 @@
     <Compile Include="Migrations\202005271357293_InitialMigration.Designer.cs">
       <DependentUpon>202005271357293_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005291423188_SecondMigration.cs" />
+    <Compile Include="Migrations\202005291423188_SecondMigration.Designer.cs">
+      <DependentUpon>202005291423188_SecondMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005311852093_WheresMyDb.cs" />
+    <Compile Include="Migrations\202005311852093_WheresMyDb.Designer.cs">
+      <DependentUpon>202005311852093_WheresMyDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005311857431_RemovedFK.cs" />
+    <Compile Include="Migrations\202005311857431_RemovedFK.Designer.cs">
+      <DependentUpon>202005311857431_RemovedFK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005312126361_ProfileFK.cs" />
+    <Compile Include="Migrations\202005312126361_ProfileFK.Designer.cs">
+      <DependentUpon>202005312126361_ProfileFK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006012038069_ProfileEnum.cs" />
+    <Compile Include="Migrations\202006012038069_ProfileEnum.Designer.cs">
+      <DependentUpon>202006012038069_ProfileEnum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006012326190_EnumMisspelling.cs" />
+    <Compile Include="Migrations\202006012326190_EnumMisspelling.Designer.cs">
+      <DependentUpon>202006012326190_EnumMisspelling.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
+    <Compile Include="Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reply.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -78,6 +104,27 @@
     <EmbeddedResource Include="Migrations\202005271357293_InitialMigration.resx">
       <DependentUpon>202005271357293_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005291423188_SecondMigration.resx">
+      <DependentUpon>202005291423188_SecondMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005311852093_WheresMyDb.resx">
+      <DependentUpon>202005311852093_WheresMyDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005311857431_RemovedFK.resx">
+      <DependentUpon>202005311857431_RemovedFK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005312126361_ProfileFK.resx">
+      <DependentUpon>202005312126361_ProfileFK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006012038069_ProfileEnum.resx">
+      <DependentUpon>202006012038069_ProfileEnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006012326190_EnumMisspelling.resx">
+      <DependentUpon>202006012326190_EnumMisspelling.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

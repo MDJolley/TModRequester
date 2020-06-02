@@ -1,0 +1,106 @@
+﻿body {
+    background-color: black;
+}
+.spacer{
+    clear:both;
+}
+#logo {
+    height: 50px;
+    width: auto;
+    padding: 6px;
+}
+
+.snapshot {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    overflow: hidden;
+    border: 1px outset black;
+    float: left;
+}
+
+.snpsht-name {
+    text-align: center;
+}
+
+.snpsht-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    text-align: center;
+}
+
+.post-list {
+    width: 100%;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 3px;
+    margin: 10px;
+    height: 140px;
+}
+
+.post {
+    width: 100%;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.post-content {
+    height: 100%;
+    background-color: white;
+    padding: 10px;
+    margin-left: 120px;
+}
+
+.post-title {
+    text-align: left;
+}
+
+.post-body {
+    text-align: justify;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+#vote-sctn{
+    display:flex;
+    justify-content:space-around;
+}
+.vote-btn {
+    position:relative;
+    left: 200px;
+}
+
+.reply-view {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reply-list {
+    width:100%;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.reply-content {
+    height: 100%;
+    background-color: white;
+    padding: 10px;
+    margin-left: 120px;
+}
+.reply-create {
+    width: 100%;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 3px;
+    margin: 10px;
+}
