@@ -22,3 +22,4 @@ C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.ProfileFK.resources
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.ProfileEnum.resources
 C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.EnumMisspelling.resources
+C:\Users\Mikoo\Documents\ElevenFiftyProjects\RedBadge\TModRequester\TMR.Data\obj\Debug\TMR.Data.Migrations.UsrNmeAttrib.resources

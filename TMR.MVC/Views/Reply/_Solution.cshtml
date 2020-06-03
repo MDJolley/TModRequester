@@ -1,0 +1,9 @@
+﻿@{ 
+    int id = (int)this.ViewData["ReplyID"];
+}
+@using(Html.BeginForm($"Solution/{id}", "Reply", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <button name="Solution" type="submit" value="Solution">Mark as Solution</button>
+}

@@ -21,6 +21,12 @@ namespace TMR.Services
         {
             using (var db = new ApplicationDbContext())
             {
+                var userProfile = db.Profiles.SingleOrDefault(p => p.UserID == _userId);
+                if (userProfile==null)
+                {
+                    var svc = new ProfileService(_userId);
+                    svc.CreateProfile(_userId);
+                }
                 var entity = new Post()
                 {
                     UserID = _userId,
@@ -31,11 +37,6 @@ namespace TMR.Services
                 };
 
 
-                if (entity.Profile == null)
-                {
-                    var svc = new ProfileService(_userId);
-                    svc.CreateProfile(_userId);
-                }
                 db.Posts.Add(entity);
                 return db.SaveChanges() == 1;
             }
@@ -64,11 +65,11 @@ namespace TMR.Services
         }
 
         //GET BY USER
-        public IEnumerable<PostListItem> GetPostsByUser()
+        public IEnumerable<PostListItem> GetPostsByUser(Guid user)
         {
             using (var db = new ApplicationDbContext())
             {
-                var query = db.Posts.Where(e => e.UserID == _userId).Select(e => new PostListItem
+                var query = db.Posts.Where(e => e.UserID == user).Select(e => new PostListItem
                 {
                     PostID = e.ID,
                     Title = e.Title,

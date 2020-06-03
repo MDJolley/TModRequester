@@ -33,6 +33,7 @@ namespace TMR.MVC.Controllers
         {
             var svc = CreateProfileService();
             var prof = svc.GetMyProfile();
+            
             return View(prof);
         }
 
@@ -67,6 +68,12 @@ namespace TMR.MVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ProfileService(userId);
+            return service;
+        }
+        private PostService CreatePostService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new PostService(userId);
             return service;
         }
     }

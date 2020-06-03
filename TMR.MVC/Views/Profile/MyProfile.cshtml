@@ -4,14 +4,18 @@
     ViewBag.Title = "MyProfile";
 }
 
-    <h2>@Html.DisplayFor(model => model.UserName)</h2>
+    <h2 class="profile-usrnme">@Html.DisplayFor(model => model.UserName)</h2>
+    <div class="profile-main">
+        <div>
+            <img class="profile-picture" src=@($"/Assets/{Model.Picture}.png") alt="Photo Not Found" />
+            <div class="profile-bio">
+                <h4>@Html.DisplayNameFor(model => model.BIO)</h4>
+                <h6>@Html.DisplayFor(model => model.BIO)</h6>
+            </div>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "SetProfile",null, new { @class = "btn btn-default" })
+        </p>
 
-<div>
-    <img src=@($"/Assets/{Model.Picture}.png") alt="Photo Not Found" />
-    <h4>@Html.DisplayNameFor(model=>model.BIO)</h4>
-    <h6>@Html.DisplayFor(model=>model.BIO)</h6>
-</div>
-<p>
-    @Html.ActionLink("Edit", "SetProfile" ) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+    </div>

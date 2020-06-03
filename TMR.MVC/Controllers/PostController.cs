@@ -17,13 +17,9 @@ namespace TMR.MVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new PostService(userId);
-            var profService = new ProfileService(userId);
             var model = service.GetPosts();
             ViewBag.Viewer = userId;
-            foreach(var item in model)
-            {
-                ViewBag.Profile = profService.GetProfile(userId);
-            }
+            
 
             return View(model);
         }
@@ -57,10 +53,7 @@ namespace TMR.MVC.Controllers
             //POST: Reply:: ViewBag
             var userId = Guid.Parse(User.Identity.GetUserId());
             var replyService = new ReplyService(userId);
-            var profService = new ProfileService(userId);
             ViewBag.PostID = id;
-            ViewBag.PosterID = model.UserID;
-            ViewBag.Profile = profService.GetProfile(userId); // check this
 
             //GET: Replies:: ViewBag
             var replyList = replyService.GetRepliesByPost(id);
@@ -144,6 +137,15 @@ namespace TMR.MVC.Controllers
             TempData["SaveResult"] = "Unable to change your vote.";
             return RedirectToAction($"Details/{id}");
         }
+        //GET POSTS--User
+        public ActionResult GetUserPosts(Guid user)
+        {
+            var svc = CreatePostService();
+            var model = svc.GetPostsByUser(user);
+            return View(model);
+        }
+
+
 
 
 

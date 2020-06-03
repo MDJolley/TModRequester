@@ -87,6 +87,10 @@
     <Compile Include="Migrations\202006012326190_EnumMisspelling.Designer.cs">
       <DependentUpon>202006012326190_EnumMisspelling.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006021741152_UsrNmeAttrib.cs" />
+    <Compile Include="Migrations\202006021741152_UsrNmeAttrib.Designer.cs">
+      <DependentUpon>202006021741152_UsrNmeAttrib.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Profile.cs" />
@@ -121,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006012326190_EnumMisspelling.resx">
       <DependentUpon>202006012326190_EnumMisspelling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006021741152_UsrNmeAttrib.resx">
+      <DependentUpon>202006021741152_UsrNmeAttrib.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

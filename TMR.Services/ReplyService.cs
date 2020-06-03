@@ -47,7 +47,7 @@ namespace TMR.Services
                 {
                     ID = e.ID,
                     UserID = e.UserID,
-                    ProfileDetail = new ProfileDetail() { BIO=e.Profile.BIO, Picture=e.Profile.Picture, UserName=e.Profile.UserName},
+                    ProfileDetail = new ProfileDetail() { BIO = e.Profile.BIO, Picture = e.Profile.Picture, UserName = e.Profile.UserName },
                     Body = e.Body,
                     PostID = e.PostID
                 });
@@ -70,7 +70,13 @@ namespace TMR.Services
                     TimeEdited = entity.TimeEdited,
                     Solution = entity.Solution,
                     PostID = entity.PostID,
-                    ProfileDetail = new ProfileDetail() { BIO = entity.Profile.BIO, Picture = entity.Profile.Picture, UserName = entity.Profile.UserName }
+                    ProfileDetail = new ProfileDetail()
+                    {
+                        BIO = entity.Profile.BIO,
+                        Picture = entity.Profile.Picture,
+                        UserName = entity.Profile.UserName
+                    }
+                    
                 };
             }
         }
@@ -90,16 +96,16 @@ namespace TMR.Services
                 });
                 //Trying a new way to create a viewbag
 
-                var profiles = new List<ProfileDetail>();
-                var prof = new ProfileService(_userId);
-                foreach (var item in query)
-                {
+                //var profiles = new List<ProfileDetail>();
+                //var prof = new ProfileService(_userId);
+                //foreach (var item in query)
+                //{
 
-                    {
-                        profiles.Add(prof.GetProfile(item.UserID));
-                    }
-                }
-                
+                //    {
+                //        profiles.Add(prof.GetProfile(item.UserID));
+                //    }
+                //}
+
                 return query.ToArray();
             }
         }
@@ -126,6 +132,25 @@ namespace TMR.Services
                 db.Replies.Remove(entity);
 
                 return db.SaveChanges() == 1;
+            }
+        }
+
+        //MARK SOLUTION
+        public bool IsSolution(int id)
+        {
+            using (var db = new ApplicationDbContext())
+            {
+                var reply = db.Replies.Single(r => r.ID == id);
+                var post = db.Posts.Single(p => p.ID == reply.PostID);
+                if (post.Solved == false)
+                {
+                    reply.Solution = true;
+                    post.Solved = true;
+                    //Give replier an award
+
+                    return db.SaveChanges() == 1;
+                }
+                return false;
             }
         }
 

@@ -251,9 +251,10 @@
     <Content Include="Views\Profile\GetProfileDetail.cshtml" />
     <Content Include="Views\Profile\MyProfile.cshtml" />
     <Content Include="Views\Profile\SetProfile.cshtml" />
-    <Content Include="Views\Reply\_GetRepliesByPost.cshtml" />
     <Content Include="Views\Reply\_CreateReply.cshtml" />
-    <Content Include="Views\Reply\GetRepliesByPost.cshtml" />
+    <Content Include="Views\Reply\_GetRepliesByPost.cshtml" />
+    <Content Include="Views\Post\_GetUserPosts.cshtml" />
+    <Content Include="Views\Reply\_Solution.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

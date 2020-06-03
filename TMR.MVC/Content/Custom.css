@@ -1,6 +1,32 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
     background-color: black;
 }
+.btn{
+    position:relative;
+    top:-10px;
+}
+#mrf{
+    position:relative;
+    top: 7px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+#front-jumbo {
+    /*background-image:url(/Assets/Devourer.png);
+    background-repeat:no-repeat;*/
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 90%;
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+    top: 30px;
+    top: 30px;
+    color: dimgray;
+    
+}   
 .spacer{
     clear:both;
 }
@@ -9,7 +35,14 @@
     width: auto;
     padding: 6px;
 }
-
+#mod-req {
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+    color:black;
+    height: 150px;
+}
 .snapshot {
     height: 100px;
     width: 100px;
@@ -21,31 +54,39 @@
 
 .snpsht-name {
     text-align: center;
+    font-weight:bolder;
 }
 
 .snpsht-pic {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 40px;
+    height: 60px;
     text-align: center;
 }
 
 .post-list {
     width: 100%;
-    background-color: antiquewhite;
+    background-image: url(/Assets/Stones.png);
+    background-repeat:repeat;
     padding: 20px;
-    border-radius: 3px;
     margin: 10px;
     height: 140px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px white;
+    
+
 }
 
 .post {
     width: 100%;
-    background-color: antiquewhite;
+    background-image: url(/Assets/Stones.png);
+    background-repeat: repeat;
     padding: 20px;
     border-radius: 3px;
     margin: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px white;
 }
 
 .post-content {
@@ -74,9 +115,23 @@
 }
 .vote-btn {
     position:relative;
-    left: 200px;
+    left: 10px;
+    bottom:3px;
+}
+.vote-btn {
+    position: relative;
+    left: 10px;
+    bottom: 3px;
+}
+.solution-sctn{
+    background:white;
 }
 
+.submit-btn {
+    position: relative;
+    left: 10px;
+    bottom: 3px;
+}
 .reply-view {
     width: 90%;
     margin-left: auto;
@@ -84,11 +139,15 @@
 }
 
 .reply-list {
-    width:100%;
-    background-color: antiquewhite;
+    width: 100%;
+    background-image: url(/Assets/Stones.png);
+    background-repeat: repeat;
     padding: 20px;
     border-radius: 3px;
     margin: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px white;
+
 }
 
 .reply-content {
@@ -96,11 +155,53 @@
     background-color: white;
     padding: 10px;
     margin-left: 120px;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
-.reply-create {
-    width: 100%;
-    background-color: antiquewhite;
-    padding: 20px;
-    border-radius: 3px;
+.reply-create{
+    width:100%;
+    background-image:url(/Assets/Stones.png);
+    background-repeat:repeat;
+    padding:20px;
+    border-radius:3px;
     margin: 10px;
+    min-height:80px;
+    box-shadow: 0 0 0 2px white;
+}
+.profile-usrnme {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight:900;
+    width: auto;
+   
+}
+.profile-main{
+    position: relative;
+    top: 110px;
+    display:flex;
+    justify-content:center;
+    height: 300px;
+}
+.profile-main img{
+    width: auto;
+    height:100px;
+    margin:20px;
+}
+.profile-bio{
+    margin: 20px;
+    color:white;
+    border-radius:3px;
+    box-shadow: 0 0 0 2px white;
+    background-color:transparent;
+    padding:10px;
+    float:right;
+    max-width: 200px;
+}
+.profile-main p{
+    position:absolute;
+    left: 40%;
+    top: 160px;
+}
+.form-control{
+    width:900px !IMPORTANT;
 }

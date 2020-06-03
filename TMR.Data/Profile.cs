@@ -14,6 +14,8 @@ namespace TMR.Data
 
         [Key] public Guid UserID { get; set; }
         public Pictures Picture { get; set; }
+        [MaxLength(20, ErrorMessage ="Username too long!")]
+        [MinLength(3, ErrorMessage ="Username too short!")]
         public string UserName { get; set; }
         public string BIO { get; set; }
 

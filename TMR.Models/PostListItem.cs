@@ -17,8 +17,7 @@ namespace TMR.Models
         public int PostID { get; set; }
         public ProfileDetail Profile { get; set; }
         public int Votes { get; set; }
-
-        [Display(Name="Date of Post")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTimeOffset TimePosted { get; set; }
     }
 }

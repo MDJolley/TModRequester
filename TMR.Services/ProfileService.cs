@@ -65,7 +65,7 @@ namespace TMR.Services
         }
 
         //Write a method that converts a collection of profiles to profile details
-        
+
 
 
     }

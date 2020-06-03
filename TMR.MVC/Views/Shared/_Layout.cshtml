@@ -9,7 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
+<body style="background-image:url(/Assets/Background.jpg);background-repeat:no-repeat;">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -22,7 +22,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><img src="~/Assets/Logo.png" alt="Terraria" id="logo"/></li>
-                    <li id="mrf" ><h4 style="color:gray;font-weight:bold">Mod Request Forum</h4></liid="mrf">
+                    <li id="mrf" ><h4 style="color:gray;font-weight:bold">Mod Request Forum</h4></li>
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Posts", "Index", "Post")</li>
                     <li>@Html.ActionLink("Profile", "MyProfile", "Profile")</li>
@@ -35,7 +35,6 @@
     <div class="container body-content">
         @RenderBody()
         
-        <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Michael Jolley | TModRequester</p>
         </footer>

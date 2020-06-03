@@ -23,15 +23,7 @@ namespace TMR.MVC.Controllers
             var svc = CreateReplyService();
             var model = svc.GetRepliesByPost(postID);
             var profileList = new List<ProfileDetail>();
-            foreach (var item in model)
-            {
-                using (var prof = new TMR.MVC.Controllers.ProfileController())
-                {
-                    var profService = prof.CreateProfileService();
-                     profileList.Add(profService.GetProfile(item.UserID));
-                }
-            }
-            ViewBag.ListOfProfiles = profileList;
+            
             return PartialView(model);
         }
 
@@ -77,6 +69,30 @@ namespace TMR.MVC.Controllers
             svc.DeleteReply(model.ID);
             return RedirectToAction($"../Post/Details/{postId}");
         }
+        //GET listitem/SOLUTION
+        public ActionResult Solution()
+        {
+            return View();
+        }
+        [HttpPost][ValidateAntiForgeryToken]
+        public ActionResult Solution(int id)
+        {
+            var svc = CreateReplyService();
+            var reply = svc.GetReplyByID(id);
+            var postSvc = CreatePostService();
+            var post = postSvc.GetPostByID(reply.PostID);
+
+            if (svc.IsSolution(id))
+            {
+                return RedirectToAction($"../Post/Detail/{post.ID}");
+            }
+            TempData["SaveResult"] = "Unable to mark reply as solution.";
+            return RedirectToAction($"../Post/Details/{post.ID}");
+        }
+
+
+
+        //GET REPLIES -- User
 
 
 
@@ -88,6 +104,12 @@ namespace TMR.MVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ReplyService(userId);
+            return service;
+        }
+        private PostService CreatePostService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new PostService(userId);
             return service;
         }
     }
