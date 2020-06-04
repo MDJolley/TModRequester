@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<TMR.Models.ReplyListItem>
     @{bool slvd = (bool)this.ViewData["SolvedStatus"];}
+    
 
 @foreach (var item in Model)
 {
@@ -16,7 +17,7 @@
                 </p>
             </div>
             <div class="reply-footer">
-                @if (!slvd){
+                @if (!slvd && (bool)ViewData["ownerTest"]){
                 @Html.Partial("../Reply/_Solution", null, new ViewDataDictionary { { "ReplyID", item.ID } })
                 }
             </div>

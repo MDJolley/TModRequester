@@ -93,7 +93,10 @@ namespace TMR.MVC.Controllers
 
 
         //GET REPLIES -- User
-
+        public ActionResult REEEEEE()
+        {
+            return View();
+        }
 
 
 

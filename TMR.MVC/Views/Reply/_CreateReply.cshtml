@@ -11,7 +11,7 @@
         <div class="form-group">
             <h5 style="float:left;position:relative;top:-2px;background-color:white;padding:5px;border-radius:3px;box-shadow:0 0 0 2px black;">Leave a Reply:</h5>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "form-control txtbx" } })
                 @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
             </div>
         </div>

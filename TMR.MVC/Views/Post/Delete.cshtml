@@ -8,73 +8,44 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>PostDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.UserID)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.UserID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Body)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Body)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TimePosted)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TimePosted)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TimeEdited)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TimeEdited)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Votes)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Votes)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Solved)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Solved)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+    <div class="post">
+        <div class="snapshot">
+            @Html.Partial("../Profile/_GetProfileSnapshot", (TMR.Models.ProfileDetail)Model.Profile, new ViewDataDictionary { { "user", Model.UserID } })
         </div>
-    }
+        <div class="post-content">
+            <h4 class="post-title">
+                @Html.DisplayFor(model => model.Title)
+            </h4>
+            <hr />
+            <p class="post-body">
+                @Html.DisplayFor(model => model.Body)
+            </p>
+            <hr />
+            <div class="post-footer">
+                <p>
+                    Posted:
+                    @Html.DisplayFor(model => model.TimePosted)
+                </p>
+                <div id="vote-sctn">
+                    <p>
+                        Votes:
+                        @Html.DisplayFor(model => model.Votes)
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions" style="margin-top:20px;margin-left:7%;">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        @Html.ActionLink("Cancel", "Details", new { id = Model.ID }, new { @class = "btn btn-default" })
+    </div>
+}
+    </div>

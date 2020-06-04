@@ -242,8 +242,6 @@
     <Content Include="Views\Post\Index.cshtml" />
     <Content Include="Views\Post\Details.cshtml" />
     <Content Include="Views\Post\Edit.cshtml" />
-    <Content Include="Views\Reply\OLDGetRepliesByPost.cshtml" />
-    <Content Include="Views\Reply\OLDCreateReply.cshtml" />
     <Content Include="Views\Post\_Vote.cshtml" />
     <Content Include="Views\Post\Delete.cshtml" />
     <Content Include="Views\Reply\Delete.cshtml" />

@@ -20,13 +20,11 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><img src="~/Assets/Logo.png" alt="Terraria" id="logo"/></li>
-                    <li id="mrf" ><h4 style="color:gray;font-weight:bold">Mod Request Forum</h4></li>
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <ul class="nav navbar-nav" style="height:50px;">
+                    <li><a style="width: 370px; position:relative;top:-15px;" href="@Url.Action("Index", "Home")"><img style="float:left" src="~/Assets/Logo.png" alt="Terraria" id="logo" /><h4 id="mrf" style="color:gray;font-weight:bold">Mod Request Forum</h4></a></li>
                     <li>@Html.ActionLink("Posts", "Index", "Post")</li>
                     <li>@Html.ActionLink("Profile", "MyProfile", "Profile")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

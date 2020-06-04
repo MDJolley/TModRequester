@@ -9,7 +9,8 @@ using TMR.Services;
 
 namespace TMR.MVC.Controllers
 {
-    [Authorize]
+   // [Authorize(Roles = "Admin")]
+   [Authorize]
     public class PostController : Controller
     {
         // GET: Post
@@ -54,7 +55,7 @@ namespace TMR.MVC.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var replyService = new ReplyService(userId);
             ViewBag.PostID = id;
-
+            ViewBag.UserId = userId;
             //GET: Replies:: ViewBag
             var replyList = replyService.GetRepliesByPost(id);
             ViewBag.ReplyList = replyList;

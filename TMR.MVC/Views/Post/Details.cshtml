@@ -43,22 +43,32 @@
                 </p>
             </div>
             <p>
-                Solve Status:
-                @Html.DisplayFor(model => model.Solved)
+                @if (!Model.Solved)
+                {
+                    <p>Request Unsolved</p>
+                }
+                @if (Model.Solved)
+                {
+                    <p>Request has been solved. Thread is closed</p>
+                }
             </p>
+@{bool viewerIsOwner = (Model.UserID == ViewBag.UserId);}
+            @if (viewerIsOwner)
+            {
+            @Html.ActionLink("Delete Post", "Delete", new { id = Model.ID }, new { @class = "btn btn-default" })
+            }
         </div>
     </div>
 
 </div>
-
 <div class="reply-view">
-@Html.Partial("../Reply/_GetRepliesByPost", (TMR.Models.ReplyListItem[])ViewBag.ReplyList, new ViewDataDictionary { { "PostID", Model.ID } ,  { "SolvedStatus", Model.Solved } })
+@Html.Partial("../Reply/_GetRepliesByPost", (TMR.Models.ReplyListItem[])ViewBag.ReplyList, new ViewDataDictionary { { "PostID", Model.ID }, { "SolvedStatus", Model.Solved }, {"ownerTest",viewerIsOwner } })
 
     @if (Model.Solved == false) { 
 @Html.Partial("../Reply/_CreateReply", (new TMR.Models.ReplyCreate((int)ViewBag.PostID)))
 }
 </div>
 
-<p>
-    @Html.ActionLink("Back to List", "Index")
+<p style="margin-top:20px;margin-left:7%">
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
 </p>

@@ -48,7 +48,8 @@ body {
     width: 100px;
     background-color: white;
     overflow: hidden;
-    border: 1px outset black;
+    border: solid black;
+    border-width: 1px 2px 2px 1px;
     float: left;
 }
 
@@ -67,7 +68,7 @@ body {
 
 .post-list {
     width: 100%;
-    background-image: url(/Assets/Stones.png);
+    background-image: url(/Assets/Dirt.png);
     background-repeat:repeat;
     padding: 20px;
     margin: 10px;
@@ -80,7 +81,7 @@ body {
 
 .post {
     width: 100%;
-    background-image: url(/Assets/Stones.png);
+    background-image: url(/Assets/Dirt.png);
     background-repeat: repeat;
     padding: 20px;
     border-radius: 3px;
@@ -91,7 +92,7 @@ body {
 
 .post-content {
     height: 100%;
-    background-color: white;
+    background-color: #c6af9e;
     padding: 10px;
     margin-left: 120px;
 }
@@ -203,5 +204,5 @@ body {
     top: 160px;
 }
 .form-control{
-    width:900px !IMPORTANT;
+    max-width:70% !IMPORTANT;
 }

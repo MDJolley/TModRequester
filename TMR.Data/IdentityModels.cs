@@ -31,7 +31,7 @@ namespace TMR.Data
         {
             return new ApplicationDbContext();
         }
-
+        // you can create an instance of the RoleManager class in your AppDbContext, or elsewhere like an Admin controller maybe.
         public DbSet<Post> Posts { get; set; }
         public DbSet<Reply> Replies { get; set; }
         public DbSet<Profile> Profiles { get; set; }
