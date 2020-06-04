@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TModRequester</title>
+    <link href="~/Content/Custom.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body style="background-image:url(/Assets/Background.jpg);background-repeat:no-repeat;">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="height:50px;">
+                    <li><a style="width: 370px; position:relative;top:-15px;" href="@Url.Action("Index", "Home")"><img style="float:left" src="~/Assets/Logo.png" alt="Terraria" id="logo" /><h4 id="mrf" style="color:gray;font-weight:bold">Mod Request Forum</h4></a></li>
+                    <li>@Html.ActionLink("Posts", "Index", "Post")</li>
+                    <li>@Html.ActionLink("Profile", "MyProfile", "Profile")</li>
+                    @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Michael Jolley | TModRequester</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

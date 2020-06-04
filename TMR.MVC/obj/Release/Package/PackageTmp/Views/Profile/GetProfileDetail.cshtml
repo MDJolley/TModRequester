@@ -1,0 +1,42 @@
+﻿@model TMR.Models.ProfileDetail
+
+@{
+    ViewBag.Title = "GetProfileDetail";
+}
+
+<h2>GetProfileDetail</h2>
+
+<div>
+    <h4>ProfileDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

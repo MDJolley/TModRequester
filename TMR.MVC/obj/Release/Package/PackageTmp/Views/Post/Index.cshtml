@@ -1,0 +1,51 @@
+﻿@model IEnumerable<TMR.Models.PostListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 id="mod-req">Mod Requests</h2>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+
+<p class="btn-block">
+    @Html.ActionLink("Post Request", "Create", null, new { @class = "btn btn-default" })
+</p>
+
+
+@foreach (var item in Model)
+{
+    <div class="post-list">
+        <div class="snapshot">
+            @Html.Partial("../Profile/_GetProfileSnapshot", (TMR.Models.ProfileDetail)item.Profile, new ViewDataDictionary { { "user", item.UserID } })
+        </div>
+        <div class="post-content">
+            <h3 class="post-title">
+                @Html.DisplayFor(modelItem => item.Title)
+            </h3>
+            <div class="post-footer">
+                <p>
+                    Posted:
+                    @Html.DisplayFor(modelItem => item.TimePosted)
+                </p>
+                <p>
+                    Votes:
+                    @Html.DisplayFor(modelItem => item.Votes)
+                </p>
+                <p>
+                    @Html.ActionLink("View Thread", "Details", new { id = item.PostID }, new { @class = "btn btn-default" })
+                </p>
+            </div>
+        </div>
+    </div>
+}
+

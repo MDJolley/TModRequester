@@ -1,0 +1,10 @@
+﻿@{
+    int id = (int)this.ViewData["PostID"];
+}
+@using (Html.BeginForm($"Vote/{id}", "Post", FormMethod.Post))
+{
+    
+    @Html.AntiForgeryToken()
+
+    <button name="Vote" type="submit" value="Vote">Vote</button>
+}

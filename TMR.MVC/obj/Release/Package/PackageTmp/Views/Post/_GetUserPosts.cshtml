@@ -1,0 +1,29 @@
+﻿@model IEnumerable<TMR.Models.PostListItem>
+
+@foreach (var item in Model)
+{
+    <div class="post-list">
+        <div class="snapshot">
+            @Html.Partial("../Profile/_GetProfileSnapshot", (TMR.Models.ProfileDetail)item.Profile, new ViewDataDictionary { { "user", item.UserID } })
+        </div>
+        <div class="post-content">
+            <h3 class="post-title">
+                @Html.DisplayFor(modelItem => item.Title)
+            </h3>
+            <div class="post-footer">
+                <p>
+                    Posted:
+                    @Html.DisplayFor(modelItem => item.TimePosted.Date)
+                    @Html.Hidden(item.TimePosted.DateTime.ToString())
+                </p>
+                <p>
+                    Votes:
+                    @Html.DisplayFor(modelItem => item.Votes)
+                </p>
+                <p>
+                    @Html.ActionLink("View Thread", "Details", new { id = item.PostID }, new { @class = "btn btn-default" })
+                </p>
+            </div>
+        </div>
+    </div>
+}
